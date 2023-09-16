@@ -16,7 +16,6 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
-    "fullpage.js": "^4.0.20",
     "hbs": "^4.2.0",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^6.0.0",
