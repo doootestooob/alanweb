@@ -60,6 +60,6 @@ app.use('/', require('./routes/pages'))
 
 app.use('/auth', require('./routes/auth'))
 
-app.listen(port, ip, () => {
+app.listen(port, () => {
     console.log(`服務器運行在 http://localhost:${port}`);
 })
