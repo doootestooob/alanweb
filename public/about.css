@@ -1,0 +1,48 @@
+#aboutcontainer {
+    position: relative;
+    top: 5%;
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#aboutcontent {
+    width: 90%;
+    height: 100%;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#abouttitle {
+    font-size: 45px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    height: 15%;
+    width: 100%;
+}
+
+#abouttext {
+    height: 80%;
+    width: 100%;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Noto Sans SC', sans-serif;
+
+}
+
+#prev {
+    cursor: pointer;
+}
+
+#next {
+    cursor: pointer;
+}

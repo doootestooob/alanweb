@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="about.css">
+    <title>登入成功</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="header">
+            <div id="logo" onclick="window.location.href='/'">Alan的網站</div>
+
+            <div id="options">
+                <div id="home" onclick="window.location.href='/'">主頁</div>
+                <div id="about" onclick="aboutpage()">關於</div>
+                <div id="tools" onclick="window.location.href='/'">工具</div>
+                <div id="logout" onclick="window.location.href='/auth/logout'">登出</div>
+            </div>
+        </div>
+
+        <div id="maincontent">
+            <div id="loginsuccesscontent">
+                歡迎您！{{user.name}}！
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

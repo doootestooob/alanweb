@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="homeitem.png" type="image/x-icon" />
+    <title>OTP驗證</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="header">
+            <div id="logo" onclick="window.location.href='/'">Alan的網站</div>
+
+            <div id="options">
+                <div id="home" onclick="window.location.href='/'">主頁</div>
+                <div id="about" onclick="aboutpage()">關於</div>
+                <div id="tools" onclick="window.location.href='/'">工具</div>
+            </div>
+        </div>
+
+        <div id="content">
+
+            <div id="homeitem"><img src="homeitem.png" width="70%" height="70%">
+                <div>
+                    <span style="--i:1">你</span>
+                    <span style="--i:2">好</span>
+                    <span style="--i:3">！</span>
+                    <br>
+                    <span style="--i:4">我</span>
+                    <span style="--i:5">是</span>
+                    <span style="--i:6">A</span>
+                    <span style="--i:7">l</span>
+                    <span style="--i:8">a</span>
+                    <span style="--i:9">n</span>
+                    <span style="--i:10">T</span>
+                    <span style="--i:11">s</span>
+                    <span style="--i:12">a</span>
+                    <span style="--i:13">i</span>
+                </div>
+            </div>
+
+
+            <div id="otpcontainer">
+                <form action="/auth/verifyotp" method="post">
+                    <div id="otptit">OTP驗證</div>
+                    <input type="text" name="otpcode" id="otpcode" placeholder="請從信箱查看驗證碼，有效時間為5分鐘">
+                    <input type="submit" value="驗證" id="otpsubmit">
+                    {{#if message}}<font id="messagebox">{{message}}</font>{{/if}}
+                </form>
+            </div>
+
+
+
+        </div>
+</body>
+<script src="index.js"></script>
+
+
+</html>

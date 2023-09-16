@@ -1,0 +1,417 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+* {
+    scroll-behavior: smooth;
+    transition: 1s;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+}
+
+#header {
+    background: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1.5rem);
+    border: 1x white solid;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    align-items: center;
+    height: 9%;
+    width: 95%;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 2%;
+    transform: translate(-50%, -2%);
+}
+
+#options {
+    height: 80%;
+    align-items: center;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    font-size: x-large;
+    margin-right: 1%;
+}
+
+#options div {
+    cursor: pointer;
+    font-weight: 600;
+    width: 15%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#options div:hover {
+    background: black;
+    color: white;
+}
+
+#logo {
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-left: 1%;
+    cursor: pointer;
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(135deg, pink, 15%, rgb(244, 136, 244), 60%, rgb(255, 202, 103), red);
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+#homeitem {
+    width: 30%;
+    height: auto;
+    margin-left: 5%;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+
+}
+
+#homeitem img {
+    animation: updown 2s infinite;
+}
+
+#homeitem div {
+    text-align: center;
+}
+
+#homeitem div span {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: waviy 1.5s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+#maincontent {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, pink, 15%, rgb(244, 136, 244), 60%, rgb(255, 202, 103), red);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#loginsuccesscontent {
+    position: relative;
+    top: 50%;
+}
+
+#otpcontainer {
+    background-color: white;
+    height: 75%;
+    width: 32%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: x-large;
+}
+
+#otpcontainer form {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#otptit {
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+#otpcode {
+    font-weight: 600;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+}
+
+#otpsubmit {
+    width: 50%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    font-size: 30px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#otpsubmit:hover {
+    color: black;
+    background: linear-gradient(135deg, pink, 15%, rgb(244, 136, 244), 60%, rgb(255, 202, 103), red);
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes waviy {
+
+    0%,
+    40%,
+    100% {
+        transform: translateY(0)
+    }
+
+    20% {
+        transform: translateY(-20px)
+    }
+}
+
+#registercontainer {
+    background-color: white;
+    height: 75%;
+    width: 32%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: x-large;
+
+}
+
+#registercontainer form {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#title {
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+#registercontainer form div {
+    font-weight: 600;
+    height: 16%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#registercontainer form input {
+    width: 65%;
+    height: 40%;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid black;
+    font-size: medium;
+}
+
+#registerbtn {
+    width: 60%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+}
+
+#registerbtn input {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: black;
+    font-size: large;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    left: 35%;
+    transform: translateX(-50%);
+}
+
+#registerbtn a {
+    margin-top: 5%;
+    color: black;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#registerbtn input:hover {
+    color: black;
+    background: linear-gradient(135deg, pink, 15%, rgb(244, 136, 244), 60%, rgb(255, 202, 103), red);
+}
+
+/*===================================登入====================================*/
+
+#logincontainer {
+    background-color: white;
+    height: 75%;
+    width: 32%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: x-large;
+
+}
+
+#logincontainer form {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#logincontainer form div {
+    font-weight: 600;
+    height: 16%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#logincontainer form input {
+    width: 65%;
+    height: 40%;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid black;
+    font-size: medium;
+}
+
+#loginbtn {
+    width: 60%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+}
+
+#loginbtn input {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: black;
+    font-size: large;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    left: 35%;
+    transform: translateX(-50%);
+}
+
+#loginbtn a {
+    margin-top: 5%;
+    color: black;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#loginbtn input:hover {
+    color: black;
+    background: linear-gradient(135deg, pink, 15%, rgb(244, 136, 244), 60%, rgb(255, 202, 103), red);
+}
+
+#messagebox {
+    color: red;
+    background-color: pink;
+    text-align: center;
+    height: 40px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+}
