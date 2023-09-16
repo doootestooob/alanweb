@@ -3,8 +3,8 @@ const app = express()
 const dotenv = require('dotenv')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
-const port = 5050
-const ip = '127.0.0.1'
+const port = 5555
+
 const User = require('./modules/users')
 app.use(session({
     secret: '123456',
@@ -61,5 +61,5 @@ app.use('/', require('./routes/pages'))
 app.use('/auth', require('./routes/auth'))
 
 app.listen(port, ip, () => {
-    console.log(`服務器運行在 http://${ip}:${port}`);
+    console.log(`服務器運行在 http://localhost:${port}`);
 })
